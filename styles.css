@@ -3,7 +3,8 @@ body {
 }
 
 .navigation {
-    display: grid;
+    display: flex;
+    flex-direction: column;
 }
 
 .conent {
