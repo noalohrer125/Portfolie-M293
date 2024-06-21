@@ -3,62 +3,100 @@
     font-family: sans-serif;
 }
 
-img {
-    height: 50vh;
-    overflow: hidden;
-}
-
 body {
     background-color: black;
     display: grid;
-    grid-template-areas:
-        'navbar content';
+    grid-auto-flow: column;
     gap: 5vmax;
-    align-items: center;
     margin-top: 8vh;
+    
+    @media screen and (max-width: 800px) {
+        grid-auto-flow: row;
+    }
 }
 
 .navbar {
-    grid-area: 'navbar';
     display: flex;
     flex-direction: column;
-    width: auto;
-    height: auto;
-    margin-left: 5vw;
+    margin: 0 5vw;
     border-radius: 5px;
     background-color: #5200ff;
+    border-radius: 15px;
+    width: auto;
+
+    @media screen and (max-width: 800px) {
+        flex-direction: row;
+        justify-self: center;
+    }
 
     a {
         font-size: 5vmin;
         color: white;
         text-decoration: none;
-        padding-left: 1vw;
-        padding-bottom: 1vh;
+        padding: 5vh;
+
+        @media screen and (max-width: 800px) {
+            padding: 1vh;
+            width: 20%;
+            font-size: 3vw;
+        }
     }
 
     .active {
         background-color: #8000ff;
+        border-radius: 15px;
     }
 }
 
-
-
 .content {
-    grid-area: content;
     display: grid;
     width: 60vw;
-    height: 80vh;
-    margin-right: 5vw;
     border-radius: 10px;
     background-color: #8000ff;
+    justify-self: center;
 
-    h1 {
+    .NoaLöhrer {
         justify-self: center;
+        margin-top: 8vh;
     }
-    img {
+
+    .image {
         justify-self: center;
-        max-height: 80%;
-        max-width: 80%;
-        overflow: hidden;
+        height: 50vmin;
+
+        @media screen and (max-width: 800px) {
+            min-width: 20vw;
+        }
+    }
+
+    .image1 {
+        height: 50vmin;
+        align-self: center;
+        border-radius: 15px;
+        margin: 10vmin;
+    }
+
+    .aboutMe {
+        margin: 10vmin;
+        align-self: center;
+    }
+
+    .FähigkeitenTable {
+        margin: 15vmin 0vmin;
+
+        td {
+            padding: 0px 10px;
+            height: 0vh;
+            width: 50%;
+        }
+    }
+}
+
+.content1 {
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
     }
 }
