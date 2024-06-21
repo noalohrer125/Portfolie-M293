@@ -1,5 +1,5 @@
 * {
-    color: white;
+    color: black;
     font-family: sans-serif;
 }
 
@@ -9,7 +9,7 @@ body {
     grid-auto-flow: column;
     gap: 5vmax;
     margin-top: 8vh;
-    
+
     @media screen and (max-width: 800px) {
         grid-auto-flow: row;
     }
@@ -58,6 +58,7 @@ body {
     .NoaLöhrer {
         justify-self: center;
         margin-top: 8vh;
+        color: white;
     }
 
     .image {
@@ -67,6 +68,11 @@ body {
         @media screen and (max-width: 800px) {
             min-width: 20vw;
         }
+
+        border-radius: 15px;
+        box-shadow:
+            0 0 60px 30px #fff,
+            0 0 100px 60px #0ff;
     }
 
     .image1 {
@@ -74,6 +80,10 @@ body {
         align-self: center;
         border-radius: 15px;
         margin: 10vmin;
+        margin-right: 10vw;
+        box-shadow:
+            0 0 60px 30px #fff,
+            0 0 100px 60px #0ff;
     }
 
     .aboutMe {
@@ -81,13 +91,49 @@ body {
         align-self: center;
     }
 
-    .FähigkeitenTable {
+    .Table {
         margin: 15vmin 0vmin;
+        background-color: #00e1ff;
+        border-radius: 5px;
 
         td {
             padding: 0px 10px;
             height: 0vh;
             width: 50%;
+        }
+    }
+
+    .table1 {
+        margin: 5vmin;
+        box-shadow: unset;
+    }
+
+    .Kontakt {
+        margin: 20vh 0vw 20vh 5vw;
+    }
+
+    .kontakForm {
+        margin-left: 5vw;
+        align-self: center;
+        width: 50vw;
+
+        h1 {
+            font-size: 3vw;
+        }
+
+        .formtable {
+            td {
+                padding: 10px;
+                font-size: 2vw;
+
+                input {
+                    width: 5vw;
+                }
+            }
+
+            .submit {
+                color: black;
+            }
         }
     }
 }
