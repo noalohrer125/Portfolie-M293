@@ -106,10 +106,19 @@ body {
     .table1 {
         margin: 5vmin;
         box-shadow: unset;
+        font-size: 2vw;
     }
 
     .Kontakt {
         margin: 20vh 0vw 20vh 5vw;
+
+        @media screen and (max-width: 800px) {
+            font-size: 3vw;            
+        }
+    }
+
+    .projectimg {
+        width: 20vw;
     }
 
     .kontakForm {
